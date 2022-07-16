@@ -11,8 +11,12 @@
   --main-bgc: #ffffff;
   --additional-bgc: #2f303a;
   --accent-color: #2196f3;
-}
-
+/* icons colors */
+--grey-icon-color: #AFB1B8;
+--accent-icon-color: #2196f3; 
+--white-icon-color: #ffffff;
+}  
+ 
 body {
   font-family: var(--main-font);
   background: var(--main-bgc);
@@ -47,6 +51,11 @@ img {
   text-decoration: none;
   padding: 0;
   margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
 }
 
 /* Стилі для index.html */
@@ -92,7 +101,7 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--dark-txt-color); 
+  color: var(--dark-txt-color);
 }
 
 .list.site-nav {
@@ -128,6 +137,10 @@ img {
   color: var(--accent-color);
 }
 
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
 /* Ефективні рішення  */
 .heading {
@@ -159,12 +172,12 @@ img {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: url("../images/img-bg.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: url('../images/img-bg.jpg'),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
 
 /* Кнопка Замовити послугу */
 
@@ -186,8 +199,6 @@ img {
 .button:focus {
   background-color: #188ce8;
 }
-
-
 
 /* Особливості компанії */
 .visually-hidden {
@@ -236,6 +247,13 @@ img {
   color: var(--grey-txt-color);
 }
 
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 /* Чим займаються */
 .work-container {
   padding-bottom: 90px;
@@ -248,7 +266,7 @@ img {
 
 /* Наша команда */
 .team-section {
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
 }
 
 .heading-two {
@@ -290,6 +308,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--grey-txt-color);
+  margin-bottom: 16px;
 }
 
 /* Фільтри-кнопки на сторінці Портфоліо*/
@@ -307,6 +326,7 @@ img {
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
   border: transparent;
+  border-radius: 4px;
   cursor: pointer;
   padding: 6px 22px;
 }
@@ -343,6 +363,10 @@ img {
   gap: 30px;
 }
 
+.products-card:hover {
+  
+  
+}
 .products-item {
   font-weight: 700;
   font-size: 18px;
@@ -359,7 +383,7 @@ img {
 
 .products-wrapper {
   padding: 20px 24px;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .section {
@@ -367,7 +391,44 @@ img {
   padding-bottom: 94px;
 }
 
+/* Clients */
+.clients-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0px;
+}
+
+.clients-box {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--grey-icon-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-icon {
+  fill: var(--grey-icon-color);
+}
+
+.clients-box:hover,
+.clients-box:focus {
+  border: 1px solid var(--accent-icon-color);
+}
+
+.clients-box:hover .clients-icon {
+  fill: var(--accent-icon-color);
+}
+
 /* Footer */
+.bottom-container {
+  display: flex;
+  align-items: baseline;
+}
+
+
+
 .contact-info {
   font-style: normal;
   font-size: 14px;
@@ -413,5 +474,70 @@ img {
   text-decoration: none;
 }
 
+.bottom-invitation {
+  margin-left: 70px;
+  justify-content: baseline;
+}
+
+.bottom-invitation-text {
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--white-txt-color);
+margin-bottom: 20px;
+}
+
+.bottom-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color:rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.bottom-socials-icon {
+  fill: var(--white-icon-color);
+}
+
+.bottom-socials-link:hover,
+.bottom-socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--main-bgc);
+  border-radius: 50%;
+}
+
+.socials-icon {
+  fill: var(--grey-icon-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.socials-link:hover .socials-icon {
+  fill: var(--white-icon-color);
+}
 
 
+ 
