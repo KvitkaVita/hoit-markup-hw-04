@@ -251,6 +251,9 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 /* Чим займаються */
@@ -310,6 +313,43 @@ img {
   margin-bottom: 16px;
 }
 
+.socials-item {
+  background-color: var(--main-bgc);
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--main-bgc);
+  border-radius: 50%;
+}
+
+.socials-icon {
+  fill: var(--grey-icon-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--white-icon-color);
+}
+
+
 /* Фільтри-кнопки на сторінці Портфоліо*/
 .filters-container {
   display: flex;
@@ -362,7 +402,9 @@ img {
   gap: 30px;
 }
 
-.products-card:hover {
+.products-card:hover,
+.products-card:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -398,7 +440,7 @@ img {
   padding: 0px;
 }
 
-.clients-box {
+.clients-link {
   width: 170px;
   height: 92px;
   border: 1px solid var(--grey-icon-color);
@@ -406,19 +448,22 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #F5F5F5;
 }
 .clients-icon {
   fill: var(--grey-icon-color);
 }
 
-.clients-box:hover,
-.clients-box:focus {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--accent-icon-color);
 }
 
-.clients-box:hover .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--accent-icon-color);
 }
+
 
 /* Footer */
 .bottom-container {
@@ -505,33 +550,4 @@ img {
   background-color: var(--accent-color);
 }
 
-/* Social icons */
-.socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 
-.socials-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background-color: var(--main-bgc);
-  border-radius: 50%;
-}
-
-.socials-icon {
-  fill: var(--grey-icon-color);
-}
-
-.socials-link:hover,
-.socials-link:focus {
-  background-color: var(--accent-color);
-}
-
-.socials-link:hover .socials-icon {
-  fill: var(--white-icon-color);
-}
