@@ -171,8 +171,7 @@ img {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: url('../images/img-bg.jpg'),
-    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/img-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -289,6 +288,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--main-bgc);
 }
 
 .team-wrapper {
@@ -311,10 +311,6 @@ img {
   letter-spacing: 0.03em;
   color: var(--grey-txt-color);
   margin-bottom: 16px;
-}
-
-.socials-item {
-  background-color: var(--main-bgc);
 }
 
 /* Social icons */
@@ -424,7 +420,8 @@ img {
 
 .products-wrapper {
   padding: 20px 24px;
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .section {
@@ -448,7 +445,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F5F5F5;
+  background-color: var(--main-bgc);
 }
 .clients-icon {
   fill: var(--grey-icon-color);
